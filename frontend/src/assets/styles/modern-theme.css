@@ -1,0 +1,498 @@
+.light {
+    color-scheme: light;
+    --surface: #ffffff;
+    --surface-raised: #ffffff;
+    --surface-soft: #eef3e9;
+    --border: #e0e8dc;
+    --muted: #7d897e;
+    --accent-strong: #263d2d;
+    --accent-hover: #35563e;
+    --positive: #507a45;
+    --negative: #b94c45;
+}
+
+.dark {
+    color-scheme: dark;
+    --surface: #1d2d24;
+    --surface-raised: #24362b;
+    --surface-soft: #26382d;
+    --border: #34483a;
+    --muted: #a1afa2;
+    --accent-strong: #c9f27b;
+    --accent-hover: #d8f6a0;
+    --positive: #c9f27b;
+    --negative: #ff8d83;
+}
+
+.user-panel {
+    min-height: 100vh;
+    background: var(--third);
+    color: var(--text);
+    font-family: "Spinnaker", "Segoe UI", sans-serif;
+}
+
+.user-panel .side-bar {
+    border-right: 1px solid var(--border);
+    background:
+        radial-gradient(ellipse at 0 0, rgba(201, 242, 123, .07), transparent 38%),
+        var(--third);
+}
+
+.user-panel .side-bar h1.logo {
+    color: var(--text);
+    font-size: 21px;
+}
+
+.user-panel .side-bar h1.logo .logo-img {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background-image: none;
+    background-color: var(--second);
+    color: var(--third);
+    font-family: "Spinnaker", sans-serif;
+    font-size: 18px;
+    line-height: 34px;
+    text-align: center;
+}
+
+.user-panel .side-bar h1.logo .logo-img::after {
+    content: "$";
+    vertical-align: middle;
+}
+
+.user-panel .side-bar ul {
+    margin: 17px 13px;
+}
+
+.user-panel .side-bar ul li {
+    margin-bottom: 5px;
+    padding: 13px 15px;
+    border: 0;
+    border-radius: 9px;
+    color: var(--muted);
+    font-size: 12px;
+    transition: color 150ms ease, background-color 150ms ease;
+}
+
+.user-panel .side-bar ul li:hover {
+    background: var(--hover);
+    color: var(--text);
+}
+
+.user-panel .side-bar ul li.active {
+    background: var(--hover);
+    color: var(--second);
+    box-shadow: inset 3px 0 var(--second);
+}
+
+.user-panel .side-bar ul li i,
+.user-panel .side-bar ul li.active i {
+    color: inherit;
+}
+
+.user-panel .side-bar .mobile {
+    color: var(--text);
+    cursor: pointer;
+}
+
+.user-panel .user-content {
+    min-width: 0;
+    background:
+        radial-gradient(ellipse at 95% 0, rgba(201, 242, 123, .045), transparent 28%),
+        var(--third);
+}
+
+.user-content .top {
+    min-height: 70px;
+    padding: 10px 25px;
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--third) 94%, transparent);
+    backdrop-filter: blur(12px);
+}
+
+.user-content .top .title h1 {
+    margin: 0;
+    color: var(--text);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -.03em;
+}
+
+.user-content .top .profile {
+    gap: 10px;
+    color: var(--text);
+}
+
+.user-content .top .profile .profile-img img {
+    width: 37px;
+    height: 37px;
+    border: 2px solid var(--third);
+    outline: 1px solid var(--border);
+}
+
+.user-content .top .profile div p {
+    color: var(--text);
+    font-size: 11px;
+}
+
+.user-content .top .profile div p:last-of-type {
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.user-content .top .profile > img {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--surface);
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.user-panel .user-content > h1,
+.user-panel .user-content > h2,
+.user-panel .user-content > h3,
+.user-panel .user-content > h4 {
+    color: var(--text);
+}
+
+.user-panel .details {
+    gap: 15px;
+    margin: 22px 0;
+}
+
+.user-panel .details > div {
+    min-height: 120px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--surface);
+    box-shadow: 0 8px 24px rgba(26, 45, 31, .045);
+    color: var(--text);
+}
+
+.user-panel .details > div:nth-of-type(1),
+.user-panel .details > div:nth-of-type(2),
+.user-panel .details > div:nth-of-type(3),
+.user-panel .details > div:nth-of-type(4) {
+    background: var(--surface);
+}
+
+.user-panel .details > div div {
+    gap: 9px;
+    color: var(--text);
+}
+
+.user-panel .details > div div p,
+.user-panel .details > div div h3,
+.user-panel .details > div div h4 {
+    color: var(--text);
+}
+
+.user-panel .details > div img {
+    width: 43px;
+    height: 43px;
+    padding: 9px;
+    border-radius: 12px;
+    background: var(--surface-soft);
+    object-fit: contain;
+}
+
+.user-panel .dashboard-chart {
+    height: auto;
+    min-height: 330px;
+    align-items: stretch;
+    gap: 15px;
+}
+
+.user-panel .dashboard-chart .chart {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--surface);
+    box-shadow: 0 8px 24px rgba(26, 45, 31, .04);
+}
+
+.user-panel .dashboard-chart .chart .chart-top,
+.user-panel .dashboard-chart .chart h4 {
+    color: var(--text);
+}
+
+.user-panel .dashboard-chart .chart .chart-top button,
+.user-panel .user-content button:not(.login-submit),
+.user-panel .user-content input[type="submit"],
+.user-panel .user-content .button {
+    width: auto;
+    min-height: 35px;
+    padding: 8px 14px;
+    border: 1px solid var(--accent-strong);
+    border-radius: 8px;
+    background: var(--accent-strong);
+    color: var(--third);
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.dark .user-panel .user-content button:not(.login-submit),
+.dark .user-panel .user-content input[type="submit"],
+.dark .user-panel .user-content .button {
+    color: #17251f;
+}
+
+.user-panel .user-content button:hover,
+.user-panel .user-content input[type="submit"]:hover {
+    border-color: var(--accent-hover);
+    background: var(--accent-hover);
+    color: #17251f;
+}
+
+.user-panel .user-content .delete {
+    border-color: #b94c45;
+    background: #b94c45;
+    color: #fff;
+}
+
+.user-panel .user-content .outline {
+    border-color: var(--border);
+    background: transparent;
+    color: var(--second);
+}
+
+.user-panel .user-content input:not([type="submit"]),
+.user-panel .user-content select,
+.user-panel .user-content textarea,
+.user-panel .utils input,
+.user-panel .page input {
+    min-height: 39px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.user-panel .user-content input:focus,
+.user-panel .user-content select:focus,
+.user-panel .user-content textarea:focus {
+    border-color: var(--second);
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--second) 16%, transparent);
+}
+
+.user-panel .user-content select,
+.user-panel .user-content form select {
+    padding: 8px 12px;
+}
+
+.user-panel .t-form .input-box > label {
+    color: var(--text);
+}
+
+.user-panel .type-select {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.user-panel .type-select div {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.user-panel .type-select div.active {
+    border-color: var(--second);
+    background: var(--hover);
+    color: var(--second);
+}
+
+.user-panel .t-list,
+.user-panel .st-card {
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.user-panel .t-list .t-row:not(:last-of-type) {
+    border-bottom: 1px solid var(--border);
+}
+
+.user-panel .t-list .t-row:hover,
+.user-panel table tr:not(:first-of-type):hover {
+    background: var(--surface-soft);
+}
+
+.user-panel .t-row-left p:last-of-type,
+.user-panel .t-list .t-row-right p {
+    color: var(--muted);
+}
+
+.user-panel table {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: var(--surface);
+}
+
+.user-panel table td,
+.user-panel table th {
+    border-color: var(--border);
+}
+
+.user-panel table th {
+    background: var(--surface-soft);
+    color: var(--muted);
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.user-panel table tr,
+.user-panel table th {
+    color: var(--text);
+}
+
+.user-panel .page,
+.user-panel .outline,
+.user-panel .profile-img .action {
+    color: var(--second);
+}
+
+.user-panel .budget-form form {
+    max-width: min(440px, calc(100vw - 32px));
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .2);
+}
+
+.light .container,
+.dark .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background:
+        radial-gradient(ellipse at 92% 8%, rgba(201, 242, 123, .12), transparent 34%),
+        var(--third);
+    color: var(--text);
+}
+
+.container .auth-form {
+    width: min(100%, 420px);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: 0 16px 45px rgba(26, 45, 31, .08);
+}
+
+.container .auth-form h2,
+.container .auth-form h3,
+.container .auth-form h4,
+.container .auth-form label {
+    color: var(--text);
+}
+
+.container .auth-form .input-box {
+    margin: 14px 0;
+}
+
+.container .auth-form .input-box input:not([type="submit"]) {
+    width: 100%;
+    min-height: 43px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.container .auth-form .inline-link {
+    color: var(--second);
+}
+
+.container .auth-form .button,
+.container .auth-form button,
+.container .auth-form input[type="submit"] {
+    min-height: 43px;
+    border: 1px solid var(--accent-strong);
+    border-radius: 8px;
+    background: var(--accent-strong);
+    color: var(--third);
+}
+
+.dark .container .auth-form .button,
+.dark .container .auth-form button,
+.dark .container .auth-form input[type="submit"] {
+    color: #17251f;
+}
+
+@media (max-width: 900px) {
+    .user-content .top {
+        left: 0;
+        width: 100%;
+        background: color-mix(in srgb, var(--third) 94%, transparent);
+    }
+
+    .user-panel .user-content {
+        padding-right: 17px;
+        padding-left: 17px;
+    }
+
+    .user-panel .dashboard-chart {
+        flex-wrap: wrap;
+    }
+
+    .user-panel .dashboard-chart .chart {
+        width: 100%;
+        min-height: 290px;
+    }
+
+    .user-panel .side-bar {
+        background:
+            radial-gradient(ellipse at 0 0, rgba(201, 242, 123, .07), transparent 38%),
+            var(--third);
+    }
+
+    .user-panel .side-bar .menu {
+        z-index: 3;
+        top: 19px;
+        color: var(--text);
+    }
+
+    .user-panel .side-bar.open .menu {
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .user-panel .details {
+        gap: 10px;
+        margin: 16px 0;
+    }
+
+    .user-panel .details > div {
+        min-height: 94px;
+        flex-basis: calc(50% - 5px);
+        gap: 10px;
+        padding: 14px 12px;
+    }
+
+    .user-panel .details > div img {
+        width: 34px;
+        height: 34px;
+        padding: 7px;
+    }
+
+    .container .auth-form {
+        padding: 23px 19px;
+    }
+}

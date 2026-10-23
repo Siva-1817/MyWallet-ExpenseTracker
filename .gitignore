@@ -1,0 +1,15 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Java / Maven
+**/target/
+
+# React / Node
+**/node_modules/
+**/build/
+
+# IDE and logs
+.idea/
+*.log
